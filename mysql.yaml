@@ -19,8 +19,8 @@
   - name: mysql start and enable mysql
     ansible.builtin.service:
       name: mysqld
-      service: started
-      enable: yes
+      state: started
+      enabled: yes
   - name: connect to mysql server
     community.mysql.mysql_info:
       login_user: root
